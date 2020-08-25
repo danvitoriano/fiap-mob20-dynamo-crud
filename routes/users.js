@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var AWS = require('aws-sdk');
+// var AWS = require('aws-sdk');
 
-AWS.config.update({
-  region: "us-east-1"
-});
+// AWS.config.update({
+//   region: "us-east-1"
+// });
 
-var docClient = new AWS.DynamoDB.DocumentClient();
+// var docClient = new AWS.DynamoDB.DocumentClient();
 
 /* GET users listing. */
 router.post('/create', function (req, res, next) {

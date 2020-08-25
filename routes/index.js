@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var AWS = require('aws-sdk');
+// var AWS = require('aws-sdk');
 
-AWS.config.update({
-  region: "us-east-1",
-});
+// AWS.config.update({
+//   region: "us-east-1",
+// });
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/list', function(req, res, next) {
-  let client = new AWS.DynamoDB.DocumentClient();
+  // let client = new AWS.DynamoDB.DocumentClient();
   client.scan({TableName: 'names'}, (err, data) => {
     if (err) {
       console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2));
