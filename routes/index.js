@@ -3,7 +3,7 @@ var router = express.Router();
 var AWS = require('aws-sdk');
 
 AWS.config.update({
-  region: "us-east-1b",
+  region: "us-east-1",
 });
 
 /* GET home page. */
